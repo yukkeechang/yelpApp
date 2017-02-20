@@ -26,11 +26,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCelll" rowHeight="158" id="0Cj-ZV-kjO" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BusinessCelll" rowHeight="158" id="0Cj-ZV-kjO" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Cj-ZV-kjO" id="jBf-gJ-yCZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="157"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5R4-AR-zEo">
@@ -126,6 +126,7 @@
                                             <outlet property="reviewsLabel" destination="adJ-fZ-dAo" id="Z0g-ZR-Dec"/>
                                             <outlet property="starsImageView" destination="tPj-bE-Vsm" id="snq-p3-LFi"/>
                                             <outlet property="thumbImageView" destination="5R4-AR-zEo" id="5Id-9B-sqB"/>
+                                            <segue destination="XK0-kr-f26" kind="push" id="px5-hE-bVT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -139,7 +140,15 @@
                             <constraint firstItem="kIn-7i-VPX" firstAttribute="top" secondItem="XhR-oz-92f" secondAttribute="top" id="zhw-1C-b2T"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Yelp" id="U1d-fS-rfF"/>
+                    <navigationItem key="navigationItem" title="Yelp" id="U1d-fS-rfF">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="n8Z-Q7-Ovd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dS2-eX-HEp">
+                                <rect key="frame" x="16" y="7" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Filter"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="kIn-7i-VPX" id="Rp3-Zl-SNZ"/>
                     </connections>
@@ -148,14 +157,57 @@
             </objects>
             <point key="canvasLocation" x="2727.1999999999998" y="357.57121439280365"/>
         </scene>
+        <!--Detail View Controler-->
+        <scene sceneID="1WV-S3-drj">
+            <objects>
+                <viewController id="XK0-kr-f26" customClass="DetailViewControler" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dmD-Qv-oxt"/>
+                        <viewControllerLayoutGuide type="bottom" id="4O6-I8-fzp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6RT-2a-8gy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pBO-la-WRa">
+                                <rect key="frame" x="56" y="333" width="262" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKl-JW-i5S">
+                                <rect key="frame" x="64" y="302" width="237" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Write a Review">
+                                    <color key="titleColor" red="0.055410973727703094" green="0.067315749824047089" blue="0.020320072770118713" alpha="0.72351241438356173" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="I2s-ki-SgZ">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7x4-Du-1zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3512.8000000000002" y="357.57121439280365"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pmB-xT-rmt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CgD-yp-cmH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RjY-QN-j5t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RjY-QN-j5t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.91434425115585327" green="0.24562284350395203" blue="0.21347567439079285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -167,4 +219,5 @@
             <point key="canvasLocation" x="1788" y="357.57121439280371"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.95331546838730485" blue="0.96877752205808032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -21,8 +21,16 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
         
-          let SearchBar = UISearchBar()
-          navigationItem.titleView = SearchBar
+        let SearchBar = UISearchBar()
+        navigationItem.titleView = SearchBar
+        
+      if let navigationBar = navigationController?.navigationBar {
+           navigationBar.tintColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        
+        navigationBar.backgroundColor = UIColor.red
+        
+        }
+        
         
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
