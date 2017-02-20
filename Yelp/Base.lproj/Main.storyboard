@@ -22,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="158" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kIn-7i-VPX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="158" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kIn-7i-VPX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCelll" rowHeight="158" id="0Cj-ZV-kjO" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
@@ -64,9 +63,8 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rad-Hj-rgA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rad-Hj-rgA">
                                                     <rect key="frame" x="332" y="36" width="25" height="13"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -104,6 +102,7 @@
                                                 <constraint firstItem="cKJ-jF-hw0" firstAttribute="top" secondItem="tPj-bE-Vsm" secondAttribute="bottom" constant="1" placeholder="YES" id="FHy-v6-qLv"/>
                                                 <constraint firstItem="cKJ-jF-hw0" firstAttribute="top" secondItem="tPj-bE-Vsm" secondAttribute="bottom" constant="1" id="GU3-mi-en2"/>
                                                 <constraint firstItem="Jrw-H2-SmV" firstAttribute="leading" secondItem="jBf-gJ-yCZ" secondAttribute="leadingMargin" constant="84" id="QcS-zY-hIS"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rad-Hj-rgA" secondAttribute="trailing" constant="10" id="QuM-eV-bgW"/>
                                                 <constraint firstItem="Jrw-H2-SmV" firstAttribute="top" secondItem="cKJ-jF-hw0" secondAttribute="bottom" constant="2" id="Thv-yY-Z0Q"/>
                                                 <constraint firstItem="lSh-kh-Z9r" firstAttribute="top" secondItem="jBf-gJ-yCZ" secondAttribute="top" constant="10" id="XNf-QB-2Fo"/>
                                                 <constraint firstAttribute="bottom" secondItem="Jrw-H2-SmV" secondAttribute="bottom" constant="15" id="cog-ee-xyb"/>
@@ -114,6 +113,7 @@
                                                 <constraint firstItem="fWY-cM-1RX" firstAttribute="top" secondItem="jBf-gJ-yCZ" secondAttribute="top" constant="14" id="jG3-W0-CNF"/>
                                                 <constraint firstAttribute="trailing" secondItem="adJ-fZ-dAo" secondAttribute="trailing" constant="101" id="ozr-Yy-Ogh"/>
                                                 <constraint firstItem="adJ-fZ-dAo" firstAttribute="top" secondItem="fWY-cM-1RX" secondAttribute="bottom" constant="8" id="qDS-tU-Bwk"/>
+                                                <constraint firstItem="Rad-Hj-rgA" firstAttribute="top" secondItem="lSh-kh-Z9r" secondAttribute="bottom" id="x2I-Dr-vza"/>
                                                 <constraint firstItem="tPj-bE-Vsm" firstAttribute="leading" secondItem="5R4-AR-zEo" secondAttribute="trailing" constant="8" id="zPn-BU-8IG"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -132,6 +132,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="86i-jN-zgh" firstAttribute="top" secondItem="kIn-7i-VPX" secondAttribute="bottom" id="Stx-Mw-1ce"/>
+                            <constraint firstAttribute="trailing" secondItem="kIn-7i-VPX" secondAttribute="trailing" id="Zml-Jp-Lm0"/>
+                            <constraint firstItem="kIn-7i-VPX" firstAttribute="leading" secondItem="XhR-oz-92f" secondAttribute="leading" id="cIB-Ei-mr4"/>
+                            <constraint firstItem="kIn-7i-VPX" firstAttribute="top" secondItem="XhR-oz-92f" secondAttribute="top" id="zhw-1C-b2T"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Yelp" id="U1d-fS-rfF"/>
                     <connections>

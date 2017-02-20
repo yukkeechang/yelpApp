@@ -41,8 +41,8 @@ class BusinessCell: UITableViewCell {
         
         EstTitleLabel.preferredMaxLayoutWidth = EstTitleLabel.frame.size.width
     }
-    
-    override func layoutSubviews() {
+ 
+    override func layoutSubviews()  {
         super.layoutSubviews()
          EstTitleLabel.preferredMaxLayoutWidth = EstTitleLabel.frame.size.width
     }
